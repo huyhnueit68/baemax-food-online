@@ -21,12 +21,11 @@
 
 ## Cách cài đặt
 
-- Cấp quyền truy cập cao nhất cho tư mục chứa project
-- Import database bằng file .\Bai_Tap_Lon_NET\BackUpDatabase\QuanLyThietBi.bak hoặc chạy câu lệnh trong file DatabaseQuanLyThietBi.sql
-- Dẫn lại đường dẫn tới server trong Model\ConnectDatabase\ConnectDatabase.cs
-- Chạy thư mục Bai_Tap_Lon_NET\Bài tập lớn .NET - Phần mềm quản lý thiết bị \Bài tập lớn .NET - Phần mềm quản lý thiết bị.cs
-- Các thư viện đã được
-- Chỉnh đường dẫn export ra file excel mong muốn trong QLThongKe.cs\btnXuatExcel_Click
+- Sau khi tải project về import file vào android studio
+- Đăng nhập firebase http://firebase.com/ bằng nick gmail hoặc đăng ký 
+- Tạo một project trong firebase 
+- Tích hợp firebase vào android
+- Import file JSON và trỏ tới firebase đã dựng
 
 ## Chức Năng Chính Của Phần Mềm
 
