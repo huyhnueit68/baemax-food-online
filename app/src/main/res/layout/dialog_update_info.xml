@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="355dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size10dp"
+        android:text="Cập nhật thông tin"
+        android:textColor="@color/Red"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="35dp"
+        android:background="#E41D1B1A"
+        android:paddingLeft="10dp"
+        android:textColor="#FF9100" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/updateName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="@dimen/size15dp"
+        android:hint="Tên"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textColorHighlight="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textColorLink="@color/colorBlack"
+        android:textSize="22sp"
+        app:met_baseColor="@color/colorBlack"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorBlack"
+        app:met_singleLineEllipsis="true" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/updateAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="15dp"
+        android:hint="Địa chỉ"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="22sp"
+        app:met_baseColor="@color/colorBlack"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorBlack"
+        app:met_singleLineEllipsis="true" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/updatePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="@dimen/size15dp"
+        android:hint="Số điện thoại"
+        android:inputType="number"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="22sp"
+        app:met_baseColor="@color/colorBlack"
+        app:met_floatingLabel="highlight"
+        app:met_maxCharacters="11"
+        app:met_minCharacters="10"
+        app:met_primaryColor="@color/colorBlack"
+        app:met_singleLineEllipsis="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/duongvien_xanh"
+            android:text="Cập nhật"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/duongvien_do"
+            android:text="Đóng"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food5"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="40dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Thêm món ăn"
+        android:textColor="@color/Red"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edtTenMon"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="@dimen/size15dp"
+            android:background="@drawable/viendo"
+            android:hint="Tên món ăn"
+            android:inputType="text"
+            android:padding="@dimen/size10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtGiaMon"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="@dimen/size15dp"
+            android:background="@drawable/viendo"
+            android:hint="Giá món ăn"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/size10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:paddingLeft="15dp"
+        android:text="Thêm hình ảnh món ăn"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/imagegallery" />
+
+    <Button
+        android:id="@+id/btnfolder"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/folder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginRight="50dp">
+
+        <Button
+            android:id="@+id/btnThemMonLayoutThemMon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/duongvien_do_nhat"
+            android:text="Thêm"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
