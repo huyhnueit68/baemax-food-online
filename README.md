@@ -99,17 +99,8 @@
   <img src="/screenshot/anh10.jpg" alt=""  width="280" height="480" >
 </p>
 <p align="center">
-  <img src="/screenshot/anh11.jpg" alt=""  width="280" height="480" >
-</p>
-<p align="center">
   <img src="/screenshot/anh12.jpg" alt=""  width="280" height="480" >
 </p>
 <p align="center">
   <img src="/screenshot/anh13.jpg" alt=""  width="280" height="480" >
-</p>
-<p align="center">
-  <img src="/screenshot/anh14.jpg" alt=""  width="280" height="480" >
-</p>
-<p align="center">
-  <img src="/screenshot/anh15.jpg" alt=""  width="280" height="480" >
 </p>
