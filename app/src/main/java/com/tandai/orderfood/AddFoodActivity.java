@@ -37,6 +37,9 @@ import java.util.Calendar;
 
 import dmax.dialog.SpotsDialog;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class AddFoodActivity extends AppCompatActivity {
     private Button themMon,folder;
     private EditText tenMon,giaMon;

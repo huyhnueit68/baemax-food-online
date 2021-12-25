@@ -12,6 +12,16 @@ public class User {
         //default
     }
 
+    /**
+     *
+     * @param email
+     * @param pass
+     * @param name
+     * @param phone
+     * @param address
+     * @param type
+     * CreatedBy: PQ Huy
+     */
     public User(String email, String pass, String name, String phone, String address, String type) {
         this.email = email;
         this.pass = pass;

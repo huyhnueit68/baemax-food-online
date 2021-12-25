@@ -5,6 +5,13 @@ public class QuanAn {
     private String diachi;
     private String sdt;
 
+    /**
+     *
+     * @param tenQuan
+     * @param diachi
+     * @param sdt
+     * CreatedBy: PQ Huy
+     */
     public QuanAn(String tenQuan, String diachi, String sdt) {
         this.tenQuan = tenQuan;
         this.diachi = diachi;

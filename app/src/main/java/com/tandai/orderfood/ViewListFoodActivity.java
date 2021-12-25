@@ -34,6 +34,9 @@ import com.tandai.orderfood.Model.MonAn;
 
 import java.util.ArrayList;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class ViewListFoodActivity extends AppCompatActivity {
     ImageView back;
     TextView tenquan;
@@ -62,14 +65,17 @@ public class ViewListFoodActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * CreatedBy: PQ Huy (11.10.2021)
+     */
     private void AnhXa(){
         back = (ImageView) findViewById(R.id.btnback);
         tenquan =(TextView) findViewById(R.id.tvtenQuanLayoutXemDSMon);
     }
 
-
-
-
+    /**
+     * CreatedBy: PQ Huy (11.10.2021)
+     */
     private void initRecyclerView(){
         recyclerViewFood = (RecyclerView) findViewById(R.id.recycler_view_food);
 
@@ -104,6 +110,9 @@ public class ViewListFoodActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * CreatedBy: PQ Huy (11.10.2021)
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         final int pos = item.getGroupId();
@@ -141,8 +150,6 @@ public class ViewListFoodActivity extends AppCompatActivity {
                     return super.onContextItemSelected(item);
 
         }
-
-
     }
 
     private void displayMessage(String msg){

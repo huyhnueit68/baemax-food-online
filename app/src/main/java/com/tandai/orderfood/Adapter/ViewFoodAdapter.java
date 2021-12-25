@@ -28,12 +28,17 @@ public class ViewFoodAdapter extends RecyclerView.Adapter<ViewFoodAdapter.ViewHo
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     DatabaseReference mDatabase;
 
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public ViewFoodAdapter(ArrayList<MonAn> arrMonAn, Context context) {
         this.arrMonAn = arrMonAn;
         this.context = context;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -43,6 +48,9 @@ public class ViewFoodAdapter extends RecyclerView.Adapter<ViewFoodAdapter.ViewHo
         return new ViewHolder(itemView);
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final MonAn monAn = arrMonAn.get(i);
@@ -60,14 +68,17 @@ public class ViewFoodAdapter extends RecyclerView.Adapter<ViewFoodAdapter.ViewHo
 
     }
 
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getItemCount() {
         return arrMonAn.size();
     }
 
-
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public class ViewHolder extends  RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
         TextView name , price,status;
         ImageView image;
@@ -91,6 +102,12 @@ public class ViewFoodAdapter extends RecyclerView.Adapter<ViewFoodAdapter.ViewHo
         }
     }
 
+    /**
+     *
+     * @param position
+     * @param name
+     * CreatedBy: PQ Huy
+     */
     public void removeItem(int position, String name){
         arrMonAn.remove(position);
         notifyDataSetChanged();

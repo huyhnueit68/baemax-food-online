@@ -20,12 +20,17 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     ArrayList<Order> arrOrder;
     Context context;
 
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public OrderAdapter(ArrayList<Order> arrOrder, Context context) {
         this.arrOrder = arrOrder;
         this.context = context;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -35,6 +40,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         return new ViewHolder(itemView);
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final Order order = arrOrder.get(i);
@@ -58,21 +66,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             viewHolder.status.setText("Hết hàng");
             viewHolder.status.setTextColor(Color.RED);
         }
-
-
     }
 
-
-
-
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getItemCount() {
         return arrOrder.size();
     }
 
 
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public class ViewHolder extends  RecyclerView.ViewHolder{
         TextView name , price,quantity,status;
         ImageView image;

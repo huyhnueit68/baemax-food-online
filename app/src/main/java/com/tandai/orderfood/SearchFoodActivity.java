@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class SearchFoodActivity extends AppCompatActivity {
     MaterialSearchBar materialSearchBar;
     ListView lvFood;

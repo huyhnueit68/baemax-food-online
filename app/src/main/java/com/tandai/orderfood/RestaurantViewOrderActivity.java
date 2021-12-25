@@ -24,6 +24,9 @@ import java.util.Calendar;
 
 import info.hoang8f.widget.FButton;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class RestaurantViewOrderActivity extends AppCompatActivity {
 
     ListView listOrder;

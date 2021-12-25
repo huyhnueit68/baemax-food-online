@@ -13,6 +13,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class OreoNotification extends ContextWrapper {
 
     private static final String CHANNEL_ID = "com.tandai.orderfood";

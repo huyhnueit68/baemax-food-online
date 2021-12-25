@@ -35,12 +35,17 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
     String userID = user.getUid();
 
 
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public FavoriteAdapter(ArrayList<Favorite> arrFavorite, Context context) {
         this.arrFavorite = arrFavorite;
         this.context = context;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -57,6 +62,9 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
         viewHolder.price.setText(String.valueOf(favorite.getPrice())+"Đ");
         Picasso.with(context).load(favorite.getImage()).into(viewHolder.image);
 
+        /**
+         * CreatedBy: PQ Huy
+         */
         viewHolder.cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +86,9 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
                         }
                     }
 
+                    /**
+                     * CreatedBy: PQ Huy
+                     */
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -87,21 +98,19 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
 
             }
         });
-
-
     }
 
-
-
-
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getItemCount() {
         return arrFavorite.size();
     }
 
-
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     public class ViewHolder extends  RecyclerView.ViewHolder{
         TextView name , price;
         ImageView image, cart;
@@ -113,8 +122,4 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
             cart= (ImageView) itemView.findViewById(R.id.item_fav_cart);
         }
     }
-
-
-
-
 }

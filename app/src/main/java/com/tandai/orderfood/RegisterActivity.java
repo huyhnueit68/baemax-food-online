@@ -35,6 +35,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class RegisterActivity extends AppCompatActivity {
     EditText email,pass,name,phone,address;
     Button btnDangKy;

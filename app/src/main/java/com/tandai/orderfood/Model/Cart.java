@@ -12,6 +12,17 @@ public class Cart {
     public Cart() {
     }
 
+    /**
+     *
+     * @param tenMon
+     * @param tenQuan
+     * @param IDQuan
+     * @param linkAnh
+     * @param giaMon
+     * @param soluong
+     * @param tongTien
+     * CreatedBy: PQ Huy
+     */
     public Cart(String tenMon, String tenQuan, String IDQuan, String linkAnh,long giaMon, long soluong, long tongTien) {
         this.tenMon = tenMon;
         this.tenQuan = tenQuan;

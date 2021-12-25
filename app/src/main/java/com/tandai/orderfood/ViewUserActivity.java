@@ -32,6 +32,9 @@ import com.tandai.orderfood.Model.User;
 
 import java.util.ArrayList;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class ViewUserActivity extends AppCompatActivity {
 
     DatabaseReference database;

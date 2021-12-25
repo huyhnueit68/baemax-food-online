@@ -48,7 +48,9 @@ import java.util.Calendar;
 import de.hdodenhof.circleimageview.CircleImageView;
 import dmax.dialog.SpotsDialog;
 
-
+/**
+ * CreatedBy: PQ Huy
+ */
 public class InfoPersonActivity extends AppCompatActivity {
     Button updateInfo;
     CircleImageView image;

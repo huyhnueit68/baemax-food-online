@@ -11,6 +11,16 @@ public class Food {
     public Food() {
     }
 
+    /**
+     *
+     * @param tenMon
+     * @param tenQuan
+     * @param linkAnh
+     * @param IDQuan
+     * @param giaMon
+     * @param tinhTrang
+     * CreatedBy: PQ Huy
+     */
     public Food(String tenMon, String tenQuan, String linkAnh, String IDQuan, long giaMon, int tinhTrang) {
 
         this.tenMon = tenMon;

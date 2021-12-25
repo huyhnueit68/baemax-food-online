@@ -17,6 +17,9 @@ import com.tandai.orderfood.Notifications.Token;
 
 import io.paperdb.Paper;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class AdminActivity extends AppCompatActivity {
 
     private Button ThemQuan,XoaQuan, viewUser;
