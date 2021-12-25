@@ -1,39 +1,66 @@
 {
   "project_info": {
-    "project_number": "674640061525",
-    "firebase_url": "https://databaseorderfood.firebaseio.com",
-    "project_id": "databaseorderfood",
-    "storage_bucket": "databaseorderfood.appspot.com"
+    "project_number": "161095539151",
+    "firebase_url": "https://baemax-app-order-food-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "baemax-app-order-food",
+    "storage_bucket": "baemax-app-order-food.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:674640061525:android:4d9232cf6d6a6f4a",
+        "mobilesdk_app_id": "1:161095539151:android:81eb1c3995d035d4425aba",
+        "android_client_info": {
+          "package_name": "com.baemax.orderfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161095539151-fobcsnpk477fcnflrtq29vnet3b9o1ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMyxyiiC9jX55C2MoNQFYIZ5VzZaUXL_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161095539151-fobcsnpk477fcnflrtq29vnet3b9o1ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161095539151:android:5e10730327e37bfd425aba",
         "android_client_info": {
           "package_name": "com.tandai.orderfood"
         }
       },
       "oauth_client": [
         {
-          "client_id": "674640061525-h4sf7kdfeodij54dus8cg0nq8ti3pq8s.apps.googleusercontent.com",
+          "client_id": "161095539151-fobcsnpk477fcnflrtq29vnet3b9o1ob.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrGT8bem7hwWOnwzSdMe1kax6SW5z4E64"
+          "current_key": "AIzaSyDMyxyiiC9jX55C2MoNQFYIZ5VzZaUXL_o"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161095539151-fobcsnpk477fcnflrtq29vnet3b9o1ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
