@@ -53,7 +53,7 @@ public class AddFoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_add_food);
-        final StorageReference storageRef = storage.getReferenceFromUrl("gs://databaseorderfood.appspot.com");
+        final StorageReference storageRef = storage.getReferenceFromUrl("gs://baemax-app-order-food.appspot.com");
         AnhXa();
         waiting =  new SpotsDialog.Builder().setContext(this).setMessage("Vui lòng đợi").setCancelable(false).build();
 
@@ -130,18 +130,18 @@ public class AddFoodActivity extends AppCompatActivity {
                             });
                         }
                     });
-
-
                 }
-
             }
         });
-
-
     }
 
-
-    // chọn ảnh từ file
+    /**
+     * Hàm chọn ảnh từ file
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     * CreatedBy: PQ Huy
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode==REQUEST_CODE_FOLDER && resultCode == RESULT_OK && data != null) {
@@ -157,6 +157,9 @@ public class AddFoodActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     private void AnhXa(){
         themMon = findViewById(R.id.btnThemMonLayoutThemMon);
         folder  = findViewById(R.id.btnfolder);
@@ -164,7 +167,4 @@ public class AddFoodActivity extends AppCompatActivity {
         giaMon  = findViewById(R.id.edtGiaMon);
         image   = findViewById(R.id.ivImage);
     }
-
-
-
 }

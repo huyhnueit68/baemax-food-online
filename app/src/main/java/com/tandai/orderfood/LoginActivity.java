@@ -101,7 +101,6 @@ public class LoginActivity extends AppCompatActivity {
                             final FirebaseUser USER = FirebaseAuth.getInstance().getCurrentUser();
                             String userID = USER.getUid();
 
-
                             mData = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                             mData.addValueEventListener(new ValueEventListener() {
                                 @Override
