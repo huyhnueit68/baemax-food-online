@@ -46,8 +46,6 @@ public class LoginActivity extends AppCompatActivity {
 
     AlertDialog waiting;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
