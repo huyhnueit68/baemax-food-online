@@ -25,11 +25,17 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     ArrayList<Cart> arrCart;
     Context context;
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public CartAdapter(ArrayList<Cart> arrCart, Context context) {
         this.arrCart = arrCart;
         this.context = context;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -39,6 +45,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         return new ViewHolder(itemView);
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final Cart cart = arrCart.get(i);
@@ -50,12 +59,18 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getItemCount() {
         return arrCart.size();
     }
 
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public class ViewHolder extends  RecyclerView.ViewHolder{
         TextView nameOfFood,price,nameOfRes,quantity;
         ImageView image;

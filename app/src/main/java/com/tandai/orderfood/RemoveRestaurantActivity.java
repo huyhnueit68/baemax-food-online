@@ -20,6 +20,9 @@ import com.tandai.orderfood.Model.User;
 
 import dmax.dialog.SpotsDialog;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class RemoveRestaurantActivity extends AppCompatActivity {
     DatabaseReference mData, database;
     Button xoaQuan;

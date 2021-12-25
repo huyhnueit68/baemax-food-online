@@ -18,6 +18,22 @@ public class Order {
     public Order() {
     }
 
+    /**
+     *
+     * @param dateTime
+     * @param diachigiaohang
+     * @param sdtKhachHang
+     * @param userID
+     * @param tenkhachhang
+     * @param tenQuan
+     * @param quanID
+     * @param tenMon
+     * @param giaMon
+     * @param soluong
+     * @param linkAnh
+     * @param check
+     * CreatedBy: PQ Huy
+     */
     public Order(String dateTime,String diachigiaohang, String sdtKhachHang, String userID, String tenkhachhang, String tenQuan, String quanID, String tenMon, long giaMon, long soluong, String linkAnh,int check) {
         this.dateTime =dateTime;
         this.diachigiaohang = diachigiaohang;

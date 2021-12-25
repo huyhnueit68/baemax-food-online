@@ -32,23 +32,33 @@ public class FoodAdapter1 extends BaseAdapter {
         ListFood = listFood;
     }
 
-
-
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getCount() {
         return ListFood.size();
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public Object getItem(int position) {
         return null;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public long getItemId(int position) {
         return 0;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
 

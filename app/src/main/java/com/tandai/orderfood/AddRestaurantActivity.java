@@ -22,6 +22,9 @@ import com.tandai.orderfood.Model.User;
 
 import dmax.dialog.SpotsDialog;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class AddRestaurantActivity extends AppCompatActivity {
     EditText email,pass,name,phone,address;
     Button btnThem;

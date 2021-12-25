@@ -11,6 +11,16 @@ public class MonAn {
     public MonAn() {
     }
 
+    /**
+     *
+     * @param tenQuan
+     * @param idQuan
+     * @param tenMon
+     * @param linkAnh
+     * @param giaMon
+     * @param tinhTrang
+     * CreatedBy: PQ Huy
+     */
     public MonAn(String tenQuan, String idQuan, String tenMon, String linkAnh, long giaMon,int tinhTrang) {
         this.tenQuan = tenQuan;
         this.idQuan = idQuan;

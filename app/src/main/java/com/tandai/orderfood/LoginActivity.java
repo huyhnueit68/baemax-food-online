@@ -31,6 +31,9 @@ import com.tandai.orderfood.Model.User;
 import dmax.dialog.SpotsDialog;
 import io.paperdb.Paper;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class LoginActivity extends AppCompatActivity {
     DatabaseReference mData;
     FirebaseAuth mAuthencation;

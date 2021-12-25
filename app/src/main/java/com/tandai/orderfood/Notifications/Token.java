@@ -1,5 +1,9 @@
 package com.tandai.orderfood.Notifications;
 
+
+/**
+ * CreatedBy: PQ Huy
+ */
 public class Token {
     private String token;
     private int checkToken;

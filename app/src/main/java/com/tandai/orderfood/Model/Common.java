@@ -24,6 +24,11 @@ import static android.support.v4.content.ContextCompat.getSystemService;
 public class Common {
 
     private static final String FCM_URL = "https://fcm.googleapis.com/";
+
+    /**
+     * CreatedBy: PQ Huy
+     * @return
+     */
     public static APIService getFCMService(){
         return RetrofitClient.getClient(FCM_URL).create(APIService.class);
     }
@@ -32,6 +37,10 @@ public class Common {
     public static final String USER_KEY = "User";
     public static final String PWD_KEY = "Password";
 
+    /**
+     * CreatedBy: PQ Huy
+     * @param recyclerView
+     */
     public static void runAnimation(RecyclerView recyclerView) {
         LayoutAnimationController controller = null;
 

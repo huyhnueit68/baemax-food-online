@@ -36,6 +36,12 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String userType ="";
+
+    /**
+     *
+     * @param remoteMessage
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onMessageReceived(final RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);

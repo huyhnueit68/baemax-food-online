@@ -18,11 +18,17 @@ public class RatingAdapter extends RecyclerView.Adapter<RatingAdapter.ViewHolder
     ArrayList<Rating> arrRating;
     Context context;
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public RatingAdapter(ArrayList<Rating> arrRating, Context context) {
         this.arrRating = arrRating;
         this.context = context;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -32,6 +38,9 @@ public class RatingAdapter extends RecyclerView.Adapter<RatingAdapter.ViewHolder
         return new ViewHolder(itemView);
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Rating rating = arrRating.get(i);
@@ -42,11 +51,17 @@ public class RatingAdapter extends RecyclerView.Adapter<RatingAdapter.ViewHolder
 
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getItemCount() {
         return arrRating.size();
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public class ViewHolder extends  RecyclerView.ViewHolder{
         TextView name , comment,date;
         RatingBar ratingBar;

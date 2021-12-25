@@ -18,10 +18,16 @@ public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public CircleImageView image;
     private ItemClickListener itemClickListener;
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public void setItemClickListener(ItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public UserViewHolder(View itemView){
         super(itemView);
         name = itemView.findViewById(R.id.item_name_user);
@@ -30,6 +36,10 @@ public class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemView.setOnClickListener(this);
 
     }
+
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public void onClick(View v) {
         itemClickListener.onClick(v,getAdapterPosition(),false);

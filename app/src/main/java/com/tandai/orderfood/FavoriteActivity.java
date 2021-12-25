@@ -34,6 +34,9 @@ import com.tandai.orderfood.Model.Favorite;
 
 import java.util.ArrayList;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class FavoriteActivity extends AppCompatActivity {
 
     DatabaseReference database, databaseReference;

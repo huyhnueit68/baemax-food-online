@@ -43,7 +43,9 @@ import io.paperdb.Paper;
 
 import static java.lang.Thread.sleep;
 
-
+/**
+ * CreatedBy: PQ Huy
+ */
 public class WelcomActivity extends AppCompatActivity {
     Button btnLog;
     Button btnReg;
@@ -51,10 +53,6 @@ public class WelcomActivity extends AppCompatActivity {
     FirebaseAuth mAuthencation =FirebaseAuth.getInstance();
 
     AlertDialog waiting;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

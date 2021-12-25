@@ -1,5 +1,8 @@
 package com.tandai.orderfood.Notifications;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class Notification {
     public String body;
     public String title;

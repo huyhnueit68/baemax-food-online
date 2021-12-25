@@ -11,6 +11,16 @@ public class Rating {
     public Rating() {
     }
 
+    /**
+     *
+     * @param name
+     * @param restaurentID
+     * @param foodID
+     * @param rateValue
+     * @param comment
+     * @param dateTime
+     * CreatedBy: PQ Huy
+     */
     public Rating(String name,String restaurentID, String foodID, String rateValue, String comment,String dateTime) {
         this.name = name;
         this.restaurentID = restaurentID;

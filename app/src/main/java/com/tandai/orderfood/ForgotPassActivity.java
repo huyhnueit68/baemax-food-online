@@ -16,6 +16,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import info.hoang8f.widget.FButton;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class ForgotPassActivity extends AppCompatActivity {
     EditText email;
     FButton btnGetPass;

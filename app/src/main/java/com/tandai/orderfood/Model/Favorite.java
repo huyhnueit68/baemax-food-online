@@ -11,6 +11,16 @@ public class Favorite {
     public Favorite() {
     }
 
+    /**
+     *
+     * @param foodID
+     * @param userID
+     * @param restaurentID
+     * @param price
+     * @param image
+     * @param check
+     * CreatedBy: PQ Huy
+     */
     public Favorite(String foodID, String userID, String restaurentID, long price, String image, int check) {
         this.foodID = foodID;
         this.userID = userID;

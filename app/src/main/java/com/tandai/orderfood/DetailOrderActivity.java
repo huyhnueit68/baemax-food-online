@@ -38,6 +38,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class DetailOrderActivity extends AppCompatActivity {
     String foodID = "";
     String CustomerID = "";

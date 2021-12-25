@@ -6,6 +6,13 @@ public class Banner {
     public Banner() {
     }
 
+    /**
+     *
+     * @param id
+     * @param idQuan
+     * @param image
+     * CreatedBy: PQ Huy
+     */
     public Banner(String id, String idQuan, String image) {
         this.id = id;
         this.idQuan = idQuan;

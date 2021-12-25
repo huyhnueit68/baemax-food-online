@@ -21,6 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.tandai.orderfood.Model.User;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class ChangePassActivity extends AppCompatActivity {
     private EditText NhapMK,NhapLaiMK , MKCu;
     private Button doi,dong;

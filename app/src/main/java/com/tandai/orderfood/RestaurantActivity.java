@@ -25,6 +25,9 @@ import com.tandai.orderfood.Notifications.Token;
 
 import io.paperdb.Paper;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class RestaurantActivity extends AppCompatActivity {
     Button themMon,xemDSMon, xemDonDatHang,doiMK,update;
     ImageView LogOut;

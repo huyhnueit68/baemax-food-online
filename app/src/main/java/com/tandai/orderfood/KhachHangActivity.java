@@ -55,6 +55,9 @@ import io.paperdb.Paper;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+/**
+ * CreatedBy: PQ Huy
+ */
 public class KhachHangActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     TextView ten, tenTK;
     ListView lvFood;

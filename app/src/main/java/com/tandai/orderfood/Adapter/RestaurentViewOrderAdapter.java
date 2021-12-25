@@ -20,6 +20,9 @@ public class RestaurentViewOrderAdapter extends BaseAdapter {
     private int layout;
     private List<Order> listOrder;
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     public RestaurentViewOrderAdapter(Context context, int layout, List<Order> listOrder) {
         this.context = context;
         this.layout = layout;
@@ -27,21 +30,33 @@ public class RestaurentViewOrderAdapter extends BaseAdapter {
     }
 
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public int getCount() {
         return listOrder.size();
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public Object getItem(int position) {
         return null;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public long getItemId(int position) {
         return 0;
     }
 
+    /**
+     * CreatedBy: PQ Huy
+     */
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
 

@@ -20,6 +20,11 @@ public class MyFirebaseIdService extends FirebaseInstanceIdService {
         }
     }
 
+    /**
+     *
+     * @param refreshToken
+     * CreatedBy: PQ Huy
+     */
     private void updateToken(String refreshToken) {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
