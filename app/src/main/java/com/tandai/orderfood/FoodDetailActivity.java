@@ -323,26 +323,33 @@ public class FoodDetailActivity extends AppCompatActivity implements RatingDialo
                         // đối tượng food lấy dữ liệu từ database
                         food = dataSnapshot.getValue(MonAn.class);
                         //THiết lập ảnh
-                        Picasso.with(getBaseContext()).load(food.getLinkAnh()).into(hinh);
-                        collapsingToolbarLayout.setTitle(food.getTenMon());
+                        try{
+                            Picasso.with(getBaseContext()).load(food.getLinkAnh()).into(hinh);
+                            collapsingToolbarLayout.setTitle(food.getTenMon());
 
-                        price = food.getGiaMon();
-                        image = food.getLinkAnh();
-                        giamon.setText(price +" đ");
-                        number.setOnClickListener(new ElegantNumberButton.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                quantity = Long.parseLong(number.getNumber());
-                                price = quantity * food.getGiaMon();
-                                giamon.setText(price+" đ");
+                            price = food.getGiaMon();
+                            image = food.getLinkAnh();
+                            giamon.setText(price +" đ");
+                            number.setOnClickListener(new ElegantNumberButton.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    quantity = Long.parseLong(number.getNumber());
+                                    price = quantity * food.getGiaMon();
+                                    giamon.setText(price+" đ");
+                                }
+                            });
+
+                            tenmon.setText(food.getTenMon());
+                            if (food.getTinhTrang() == 1) {
+                                mota.setText("Tình trạng món ăn: Còn\nQuán "+food.getTenQuan()+"\nĐịa chỉ: "+quanAn.getAddress()+"\nLiên hệ: "+quanAn.getPhone());
+                            } else {
+                                mota.setText("Tình trạng món ăn: Hết\nQuán "+food.getTenQuan()+"\nĐịa chỉ: "+quanAn.getAddress()+"\nLiên hệ: "+quanAn.getPhone());
                             }
-                        });
+                        }
+                        catch(Exception e){
 
-                        tenmon.setText(food.getTenMon());
-                        if (food.getTinhTrang() == 1) {
-                            mota.setText("Tình trạng món ăn: Còn\nQuán "+food.getTenQuan()+"\nĐịa chỉ: "+quanAn.getAddress()+"\nLiên hệ: "+quanAn.getPhone());
-                        } else {
-                            mota.setText("Tình trạng món ăn: Hết\nQuán "+food.getTenQuan()+"\nĐịa chỉ: "+quanAn.getAddress()+"\nLiên hệ: "+quanAn.getPhone());
+                            Toast toast = Toast.makeText(FoodDetailActivity.this, "Món ăn đã bị xóa", Toast.LENGTH_SHORT);
+                            toast.show();
                         }
                     }
 
@@ -392,8 +399,6 @@ public class FoodDetailActivity extends AppCompatActivity implements RatingDialo
         finish();
         startActivity(getIntent());
     }
-
-
 
 
     private void initRecyclerView(final String foodID,final String RestaurentID){
