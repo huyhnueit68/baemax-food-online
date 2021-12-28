@@ -121,6 +121,7 @@ public class CartActivity extends AppCompatActivity {
 
                             // get address
                             final String diachigiaohang = diaChi.getText().toString().trim();
+
                             if (diachigiaohang.isEmpty())
                                 Toast.makeText(CartActivity.this, "Vui lòng nhập địa chỉ giao hàng", Toast.LENGTH_SHORT).show();
                             else {
@@ -132,6 +133,7 @@ public class CartActivity extends AppCompatActivity {
                                         // get sdt + ten khach hang
                                         sdt = uInfo.getPhone();
                                         tenKH = uInfo.getName();
+
                                         // them vào mảng Order
                                         for (int i = 0; i < arrCart.size(); i++) {
                                             arrOrder.add(new Order(dateTime, diachigiaohang, sdt, userID,
@@ -352,6 +354,12 @@ public class CartActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Hàm set notification
+     * @param nameCustomer
+     * @param arrId
+     * CreatedBy: PQ Huy
+     */
     private void sendNotification(final String nameCustomer, final ArrayList<String> arrId){
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query data = tokens.orderByChild("checkToken").equalTo(2); // get all node isServerToken is 2
@@ -371,6 +379,7 @@ public class CartActivity extends AppCompatActivity {
                                     if (response.code() == 200) {
                                         if (response.body().success == 1) {
                                             //Toast.makeText(CartActivity.this, "thành công", Toast.LENGTH_SHORT).show();
+
                                         } else {
                                             //Toast.makeText(CartActivity.this, "Thất bại", Toast.LENGTH_SHORT).show();
                                         }

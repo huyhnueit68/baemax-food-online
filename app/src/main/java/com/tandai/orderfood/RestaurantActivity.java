@@ -38,21 +38,19 @@ public class RestaurantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_restaurant);
-
         updateToken(FirebaseInstanceId.getInstance().getToken());
 
         // Paper init
         Paper.init(this);
-
-
         AnhXa();
-        tenQuan.setText("Quán "+user.getDisplayName());
+        tenQuan.setText("Quán "+ user.getDisplayName());
         LogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DangXuat();
             }
         });
+        LoadData_User();
         doiMK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,8 +83,6 @@ public class RestaurantActivity extends AppCompatActivity {
                 showDialogUpdate();
             }
         });
-
-
     }
 
 
@@ -123,6 +119,26 @@ public class RestaurantActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Hàm khởi tạo các giá trị ban đầu
+     * CreatedBy: PQ Huy
+     */
+    private void LoadData_User(){
+        mDatabase  = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
+        ValueEventListener eventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                User uInfo = dataSnapshot.getValue(User.class);
+                tenQuan.setText("Nhà hàng " + uInfo.getName());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        mDatabase.addValueEventListener(eventListener);
+    }
 
     private void showDialogUpdate(){
         final Dialog dialog   = new Dialog(RestaurantActivity.this,R.style.Theme_Dialog);
@@ -176,6 +192,11 @@ public class RestaurantActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Hàm cập nhật lại token
+     * @param token
+     * CreatedBy: PQ Huy
+     */
     private void updateToken(String token){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Tokens");
         Token token1 = new Token(token,2);

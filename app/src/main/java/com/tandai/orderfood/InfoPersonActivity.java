@@ -56,7 +56,6 @@ public class InfoPersonActivity extends AppCompatActivity {
     CircleImageView image;
     ImageView change_image;
     TextView ten, tenTK, diachi, sdt;
-    //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String userID;
     DatabaseReference mDatabase;
     FirebaseStorage storage = FirebaseStorage.getInstance();

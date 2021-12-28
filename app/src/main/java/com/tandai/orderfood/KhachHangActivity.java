@@ -64,16 +64,9 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
     ArrayList<Food> arrFood;
     FoodAdapter1 adapter = null;
 
-
-
     //Slider
     HashMap<String,String> image_list;
     SliderLayout mSlider;
-
-    // Refresh Layout
-//    SwipeRefreshLayout swipeRefreshLayout;
-
-
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     String userID = user.getUid();
@@ -83,21 +76,14 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
     private static final int TIME_DELAY = 2500;
     private static long back_pressed = 0;
 
-
-
     @Override
     protected void attachBaseContext(Context newBase){
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         updateToken(FirebaseInstanceId.getInstance().getToken());
 
         //set color status bar
@@ -105,44 +91,10 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
             getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
         }
 
-//        //Note  add this code before setcontentView
-//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-//                .setDefaultFontPath("fonts/Rubik.ttf")
-//                .setFontAttrId(R.attr.fontPath)
-//                .build());
-
         setContentView(R.layout.activity_customer);
-
-
-//        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.refreshLayout);
-//        swipeRefreshLayout.setColorSchemeResources(R.color.pDarkGreen, R.color.Orange, R.color.Red, R.color.colorBlue);
-//
-//
-//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                if(isNetworkAvailable()){
-//                    LoadData_Food();
-//                }else{
-//                    Toast.makeText(KhachHangActivity.this, "Vui lòng kiểm tra kết nối Internet", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        swipeRefreshLayout.setRefreshing(false);
-//                    }
-//                }, 1500);
-//
-//
-//            }
-//        });
-
 
         //setup Slider
         setupSlider();
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("MENU");
@@ -168,7 +120,6 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
                     if( ds.getValue() != null) count++;
                 }
                 fab.setCount(count);
-
             }
 
             @Override
@@ -200,9 +151,6 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
         adapter = new FoodAdapter1(this, R.layout.item_food, arrFood);
         lvFood.setAdapter(adapter);
 
-
-
-
         LoadData_Food();
 
         lvFood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -218,16 +166,15 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
                 startActivity(foodDetail);
             }
         });
-
-
-
-
     }
 
+    /**
+     * Hàm khởi tạo slide
+     * CreatedBy: PQ Huy
+     */
     private void setupSlider() {
         mSlider = (SliderLayout) findViewById(R.id.slider);
         image_list = new HashMap<>();
-
         final DatabaseReference banners = FirebaseDatabase.getInstance().getReference().child("Banner");
 
         banners.addValueEventListener(new ValueEventListener() {
@@ -286,7 +233,10 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
         mSlider.setDuration(4000);
     }
 
-
+    /**
+     * Hàm load dữ liệu của user lên
+     * CreatedBy: PQ Huy
+     */
     private void LoadData_User(){
         mDatabase  = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
         ValueEventListener eventListener = new ValueEventListener() {
@@ -304,7 +254,6 @@ public class KhachHangActivity extends AppCompatActivity implements NavigationVi
         };
         mDatabase.addValueEventListener(eventListener);
     }
-
 
     private  void LoadData_Food(){
         mDatabase = FirebaseDatabase.getInstance().getReference().child("QuanAn");

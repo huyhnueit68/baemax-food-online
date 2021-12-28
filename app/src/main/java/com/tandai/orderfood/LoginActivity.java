@@ -100,52 +100,41 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             final FirebaseUser USER = FirebaseAuth.getInstance().getCurrentUser();
                             String userID = USER.getUid();
-
                             mData = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                             mData.addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                     waiting.dismiss();
                                     User user = dataSnapshot.getValue(User.class);
-
                                     if (user.getUserType().equals("admin")) {
                                         startActivity(new Intent(LoginActivity.this, AdminActivity.class));
                                     } else if (user.getUserType().equals("restaurent")) {
                                         startActivity(new Intent(LoginActivity.this, RestaurantActivity.class));
                                     } else if (user.getUserType().equals("customer")) {
-
                                         if (USER.isEmailVerified()) {
                                             startActivity(new Intent(LoginActivity.this, KhachHangActivity.class));
                                         } else {
                                             Toast.makeText(LoginActivity.this, "Vui lòng xác thực Email để đăng nhập", Toast.LENGTH_SHORT).show();
                                         }
-
                                     }
                                 }
-
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError databaseError) {
-
                                 }
                             });
 
-
                             // ghi lai mk trong database neu quen mat kau sau khi lay lai
-
                             DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                             ValueEventListener eventListener = new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     dataSnapshot.child("pass").getRef().setValue(Pass);
                                 }
-
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
-
                                 }
                             };
                             mDatabase.addListenerForSingleValueEvent(eventListener);
-
                         } else {
                             waiting.dismiss();
                             Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu không hợp lệ.", Toast.LENGTH_SHORT).show();
@@ -159,8 +148,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
-    // kiểm tra kết nối internet
+    /**
+     * kiểm tra kết nối internet
+     * @return
+     * CreatedBy: PQ Huy
+     */
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

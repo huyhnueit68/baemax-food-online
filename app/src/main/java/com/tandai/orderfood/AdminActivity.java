@@ -35,8 +35,6 @@ public class AdminActivity extends AppCompatActivity {
 
         Paper.init(this);
 
-
-
         ThemQuan    =(Button) findViewById(R.id.btnThemQuanKhungAdmin);
         XoaQuan     =(Button) findViewById(R.id.btnXoaQuanKhungAdmin);
         logOut      =(ImageView) findViewById(R.id.btnLogOutAdmin);
@@ -101,12 +99,9 @@ public class AdminActivity extends AppCompatActivity {
         });
     }
 
-
     private void updateToken(String token){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Tokens");
         Token token1 = new Token(token,3);
         reference.child(user.getUid()).setValue(token1);
     }
-
-
 }

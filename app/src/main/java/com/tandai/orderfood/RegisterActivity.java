@@ -76,7 +76,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     *
+     */
     private void DangKy() {
         String Email = email.getText().toString().trim(); //trim() bỏ khoảng trống ở đầu và cuối chuỗi
         String Pass = pass.getText().toString().trim();
@@ -95,9 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-
                         user = mAuthencation.getCurrentUser();
-
                         user.sendEmailVerification()
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
@@ -114,18 +114,19 @@ public class RegisterActivity extends AppCompatActivity {
                                                     .setDisplayName(Name)
                                                     .setPhotoUri(null)
                                                     .build();
+
                                             user.updateProfile(profileUpdates)
                                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                         @Override
                                                         public void onComplete(@NonNull Task<Void> task) {
                                                         }
                                                     });
+
                                             //push data len realtime database
                                             String userID= user.getUid();
                                             mData.child("Users").child(userID).setValue(KhachHang);
                                             //chuyen ve man hinh chinh
                                             startActivity(new Intent(RegisterActivity.this,WelcomActivity.class));
-
                                         }
                                         else{
                                             Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();

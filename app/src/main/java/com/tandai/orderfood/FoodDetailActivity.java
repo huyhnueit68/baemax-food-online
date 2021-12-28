@@ -170,17 +170,12 @@ public class FoodDetailActivity extends AppCompatActivity implements RatingDialo
                 Picasso.with(getApplicationContext()).load(food.getLinkAnh()).into(target);
             }
         });
-
-
-
-
         btnRating.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showRatingDialog();
             }
         });
-
         btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -203,10 +198,7 @@ public class FoodDetailActivity extends AppCompatActivity implements RatingDialo
             }
         });
 
-
-
         //favorite
-
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Favorite").child(userID).child(foodId);
 
         databaseReference.addValueEventListener(new ValueEventListener() {

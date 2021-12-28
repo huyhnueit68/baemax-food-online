@@ -77,7 +77,7 @@ public class FoodAdapter1 extends BaseAdapter {
         tenQuan.setText(food.getTenQuan());
         Picasso.with(context).load(food.getLinkAnh()).into(hinh);
 
-        // set anim
+        // set animation chuyển động cho item
         Animation animation = AnimationUtils.loadAnimation(context,R.anim.item_animation_from_left);
 
         animation.setDuration(1500);
