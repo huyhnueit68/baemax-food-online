@@ -133,9 +133,6 @@ public class RegisterActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
-
-
-
                     }
                     else {
                         process.dismiss();
@@ -146,8 +143,11 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-
-
+    /**
+     * Hàm gửi thông báo
+     * @param name
+     * CreatedBy: PQ Huy
+     */
     private void sendNotification(final String name){
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query data = tokens.orderByChild("checkToken").equalTo(3); // get node isServerToken is 3

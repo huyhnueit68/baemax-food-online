@@ -122,7 +122,6 @@ public class AddFoodActivity extends AppCompatActivity {
                                         refData.child("QuanAn").child(IDQuan).child(ten).setValue(Mon);
                                         Toast.makeText(AddFoodActivity.this, "Thêm món ăn thành công", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(AddFoodActivity.this, RestaurantActivity.class));
-
                                     } else {
                                         Toast.makeText(AddFoodActivity.this, "Thêm không thành công", Toast.LENGTH_SHORT).show();
                                     }

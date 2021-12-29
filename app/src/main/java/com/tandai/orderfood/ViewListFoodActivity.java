@@ -105,9 +105,6 @@ public class ViewListFoodActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 
     /**
